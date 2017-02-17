@@ -1,0 +1,47 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile ('org.apache.commons:commons-compress:1.13')
+}
+
+task downloadGeckoWebdrivers(type: JavaExec, dependsOn: 'classes') {
+    group 'ZAP'
+    description 'Downloads the Gecko Webdrivers.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.libs.WebdriverDownloadGecko'
+}
+
+task downloadChromeWebdrivers(type: JavaExec, dependsOn: 'classes') {
+    group 'ZAP'
+    description 'Downloads the Chrome Webdrivers.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.libs.WebdriverDownloadChrome'
+}
+
+task downloadIeWebdrivers(type: JavaExec, dependsOn: 'classes') {
+    group 'ZAP'
+    description 'Downloads the IE Webdrivers.'
+    classpath configurations.runtime, sourceSets.main.output
+    main = 'org.zaproxy.libs.WebdriverDownloadIE'
+}
+
+task downloadAllWebdrivers(dependsOn: [downloadGeckoWebdrivers, downloadChromeWebdrivers, downloadIeWebdrivers]) {
+    group 'ZAP'
+    description 'Downloads all of the Webdrivers.'
+}
+
+clean {
+  delete fileTree(dir: 'files/webdriver', includes: ['**/geckodriver*', '**/chromedriver*', '**/IEDriverServer.exe'] )
+}
