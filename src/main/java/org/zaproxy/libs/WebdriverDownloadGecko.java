@@ -28,7 +28,7 @@ public class WebdriverDownloadGecko {
     public static void main(String[] args) {
 
         // Geckodriver releases: https://github.com/mozilla/geckodriver/releases
-        final String VERSION = "v0.14.0";
+        final String VERSION = "v0.18.0";
 
         // Windows
         DownloadTools.downloadDriver(
