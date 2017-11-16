@@ -29,8 +29,8 @@ public class WebdriverDownloadIE {
 
         // IEDriverServer releases: http://www.seleniumhq.org/download/
 
-        final String SHORT_VERSION = "3.4";
-        final String LONG_VERSION = "3.4.0";
+        final String SHORT_VERSION = "3.7";
+        final String LONG_VERSION = "3.7.0";
 
         DownloadTools.downloadDriver(
                 "http://selenium-release.storage.googleapis.com/" + SHORT_VERSION + "/IEDriverServer_Win32_" + LONG_VERSION + ".zip",
