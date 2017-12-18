@@ -1,4 +1,4 @@
 # JxBrowser
 
 * Site: https://www.teamdev.com/jxbrowser
-* Version: 6.17
+* Version: 6.18
