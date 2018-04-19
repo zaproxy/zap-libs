@@ -6,7 +6,7 @@
 
 ## Geckodriver
 * Site: https://github.com/mozilla/geckodriver/releases
-* Version: v0.20.0
+* Version: v0.20.1
 
 ## IEDriverServer
 * Site: http://www.seleniumhq.org/download/
