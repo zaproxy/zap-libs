@@ -1,0 +1,17 @@
+* text=auto
+
+*.gradle text
+*.java text
+LICENSE text
+*.md text
+*.properties text
+
+*.bat text eol=crlf
+*.sh text eol=lf
+gradlew text eol=lf
+
+*.exe binary
+*.jar binary
+*.tar.gz binary
+chromedriver binary
+geckodriver binary
