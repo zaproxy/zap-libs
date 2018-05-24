@@ -1,8 +1,11 @@
+plugins {
+    id 'java'
+    id "com.diffplug.gradle.spotless" version "3.10.0"
+}
+
 wrapper {
     gradleVersion = '4.7'
 }
-
-apply plugin: 'java'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -14,6 +17,14 @@ repositories {
 
 dependencies {
     compile ('org.apache.commons:commons-compress:1.13')
+}
+
+spotless {
+    java {
+        licenseHeaderFile "$projectDir/gradle/spotless/license.java"
+
+        googleJavaFormat().style('AOSP')
+    }
 }
 
 task downloadGeckoWebdrivers(type: JavaExec, dependsOn: 'classes') {
