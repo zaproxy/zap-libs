@@ -27,12 +27,10 @@ import java.net.URL;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 
 public class DownloadTools {
-
 
     public static void downloadDriver(String urlStr, String destDir, String destFile) {
         File dest = new File(destDir + destFile);
@@ -42,7 +40,8 @@ public class DownloadTools {
         }
         File parent = dest.getParentFile();
         if (!parent.exists() && !parent.mkdirs()) {
-            System.out.println("Failed to create directory : " + dest.getParentFile().getAbsolutePath());
+            System.out.println(
+                    "Failed to create directory : " + dest.getParentFile().getAbsolutePath());
         }
         byte[] buffer = new byte[1024];
         if (urlStr.endsWith(".zip")) {

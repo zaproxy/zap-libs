@@ -22,9 +22,10 @@ package org.zaproxy.libs;
 public class WebdriverDownloadGecko {
 
     /**
-     * The webdriver files are not held in the repo to prevent space problems. Run the program to download the files before
-     * building the add-on. It will need to be changed whenever there are new versions.
-     * 
+     * The webdriver files are not held in the repo to prevent space problems. Run the program to
+     * download the files before building the add-on. It will need to be changed whenever there are
+     * new versions.
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -34,31 +35,46 @@ public class WebdriverDownloadGecko {
 
         // Windows
         DownloadTools.downloadDriver(
-                "https://github.com/mozilla/geckodriver/releases/download/" + VERSION + "/geckodriver-" + VERSION
+                "https://github.com/mozilla/geckodriver/releases/download/"
+                        + VERSION
+                        + "/geckodriver-"
+                        + VERSION
                         + "-win32.zip",
                 "files/webdriver/windows/32/",
                 "geckodriver.exe");
         DownloadTools.downloadDriver(
-                "https://github.com/mozilla/geckodriver/releases/download/" + VERSION + "/geckodriver-" + VERSION
+                "https://github.com/mozilla/geckodriver/releases/download/"
+                        + VERSION
+                        + "/geckodriver-"
+                        + VERSION
                         + "-win64.zip",
                 "files/webdriver/windows/64/",
                 "geckodriver.exe");
 
         // Linux
         DownloadTools.downloadDriver(
-                "https://github.com/mozilla/geckodriver/releases/download/" + VERSION + "/geckodriver-" + VERSION
+                "https://github.com/mozilla/geckodriver/releases/download/"
+                        + VERSION
+                        + "/geckodriver-"
+                        + VERSION
                         + "-linux32.tar.gz",
                 "files/webdriver/linux/32/",
                 "geckodriver");
         DownloadTools.downloadDriver(
-                "https://github.com/mozilla/geckodriver/releases/download/" + VERSION + "/geckodriver-" + VERSION
+                "https://github.com/mozilla/geckodriver/releases/download/"
+                        + VERSION
+                        + "/geckodriver-"
+                        + VERSION
                         + "-linux64.tar.gz",
                 "files/webdriver/linux/64/",
                 "geckodriver");
 
         // MacOS
         DownloadTools.downloadDriver(
-                "https://github.com/mozilla/geckodriver/releases/download/" + VERSION + "/geckodriver-" + VERSION
+                "https://github.com/mozilla/geckodriver/releases/download/"
+                        + VERSION
+                        + "/geckodriver-"
+                        + VERSION
                         + "-macos.tar.gz",
                 "files/webdriver/macos/64/",
                 "geckodriver");

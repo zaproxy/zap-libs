@@ -22,9 +22,10 @@ package org.zaproxy.libs;
 public class WebdriverDownloadChrome {
 
     /**
-     * The webdriver files are not held in the repo to prevent space problems. Run the program to download the files before
-     * building the add-on. It will need to be changed whenever there are new versions.
-     * 
+     * The webdriver files are not held in the repo to prevent space problems. Run the program to
+     * download the files before building the add-on. It will need to be changed whenever there are
+     * new versions.
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -34,19 +35,25 @@ public class WebdriverDownloadChrome {
 
         // Windows
         DownloadTools.downloadDriver(
-                "https://chromedriver.storage.googleapis.com/" + VERSION + "/chromedriver_win32.zip",
+                "https://chromedriver.storage.googleapis.com/"
+                        + VERSION
+                        + "/chromedriver_win32.zip",
                 "files/webdriver/windows/32/",
                 "chromedriver.exe");
 
         // Linux
         DownloadTools.downloadDriver(
-                "https://chromedriver.storage.googleapis.com/" + VERSION + "/chromedriver_linux64.zip",
+                "https://chromedriver.storage.googleapis.com/"
+                        + VERSION
+                        + "/chromedriver_linux64.zip",
                 "files/webdriver/linux/64/",
                 "chromedriver");
 
         // MacOS
         DownloadTools.downloadDriver(
-                "https://chromedriver.storage.googleapis.com/" + VERSION + "/chromedriver_mac64.zip",
+                "https://chromedriver.storage.googleapis.com/"
+                        + VERSION
+                        + "/chromedriver_mac64.zip",
                 "files/webdriver/macos/64/",
                 "chromedriver");
     }

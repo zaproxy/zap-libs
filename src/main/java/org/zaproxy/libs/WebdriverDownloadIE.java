@@ -22,9 +22,10 @@ package org.zaproxy.libs;
 public class WebdriverDownloadIE {
 
     /**
-     * The webdriver files are not held in the repo to prevent space problems. Run the program to download the files before
-     * building the add-on. It will need to be changed whenever there are new versions.
-     * 
+     * The webdriver files are not held in the repo to prevent space problems. Run the program to
+     * download the files before building the add-on. It will need to be changed whenever there are
+     * new versions.
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -35,12 +36,20 @@ public class WebdriverDownloadIE {
         final String LONG_VERSION = "3.7.0";
 
         DownloadTools.downloadDriver(
-                "http://selenium-release.storage.googleapis.com/" + SHORT_VERSION + "/IEDriverServer_Win32_" + LONG_VERSION + ".zip",
+                "http://selenium-release.storage.googleapis.com/"
+                        + SHORT_VERSION
+                        + "/IEDriverServer_Win32_"
+                        + LONG_VERSION
+                        + ".zip",
                 "files/webdriver/windows/32/",
                 "IEDriverServer.exe");
 
         DownloadTools.downloadDriver(
-                "http://selenium-release.storage.googleapis.com/" + SHORT_VERSION + "/IEDriverServer_x64_" + LONG_VERSION + ".zip",
+                "http://selenium-release.storage.googleapis.com/"
+                        + SHORT_VERSION
+                        + "/IEDriverServer_x64_"
+                        + LONG_VERSION
+                        + ".zip",
                 "files/webdriver/windows/64/",
                 "IEDriverServer.exe");
     }
