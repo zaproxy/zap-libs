@@ -2,7 +2,7 @@
 
 ## Chromedriver
 * Site: https://sites.google.com/a/chromium.org/chromedriver/downloads
-* Version: 2.36
+* Version: 2.40
 
 ## Geckodriver
 * Site: https://github.com/mozilla/geckodriver/releases
