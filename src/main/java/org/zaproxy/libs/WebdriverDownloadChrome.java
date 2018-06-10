@@ -28,7 +28,7 @@ public class WebdriverDownloadChrome {
     public static void main(String[] args) {
 
         // Chromedriver releases: https://sites.google.com/a/chromium.org/chromedriver/downloads
-        final String VERSION = "2.33";
+        final String VERSION = "2.40";
 
         // Windows
         DownloadTools.downloadDriver(
@@ -37,11 +37,6 @@ public class WebdriverDownloadChrome {
                 "chromedriver.exe");
 
         // Linux
-        DownloadTools.downloadDriver(
-                "https://chromedriver.storage.googleapis.com/" + VERSION + "/chromedriver_linux32.zip",
-                "files/webdriver/linux/32/",
-                "chromedriver");
-
         DownloadTools.downloadDriver(
                 "https://chromedriver.storage.googleapis.com/" + VERSION + "/chromedriver_linux64.zip",
                 "files/webdriver/linux/64/",
