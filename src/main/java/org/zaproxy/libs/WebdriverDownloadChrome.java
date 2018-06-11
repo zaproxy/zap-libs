@@ -31,7 +31,7 @@ public class WebdriverDownloadChrome {
     public static void main(String[] args) {
 
         // Chromedriver releases: https://sites.google.com/a/chromium.org/chromedriver/downloads
-        final String VERSION = "2.36";
+        final String VERSION = "2.40";
 
         // Windows
         DownloadTools.downloadDriver(
