@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    compile ('org.apache.commons:commons-compress:1.13')
+    compile ('org.apache.commons:commons-compress:1.18')
 }
 
 spotless {
