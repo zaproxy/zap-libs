@@ -2,11 +2,11 @@
 
 ## Chromedriver
 * Site: https://sites.google.com/a/chromium.org/chromedriver/downloads
-* Version: 2.40
+* Version: 2.43
 
 ## Geckodriver
 * Site: https://github.com/mozilla/geckodriver/releases
-* Version: v0.21.0
+* Version: v0.23.0
 
 ## IEDriverServer
 * Site: http://www.seleniumhq.org/download/
