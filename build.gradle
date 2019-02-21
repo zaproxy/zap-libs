@@ -41,18 +41,11 @@ task downloadChromeWebdrivers(type: JavaExec, dependsOn: 'classes') {
     main = 'org.zaproxy.libs.WebdriverDownloadChrome'
 }
 
-task downloadIeWebdrivers(type: JavaExec, dependsOn: 'classes') {
-    group 'ZAP'
-    description 'Downloads the IE Webdrivers.'
-    classpath configurations.runtime, sourceSets.main.output
-    main = 'org.zaproxy.libs.WebdriverDownloadIE'
-}
-
-task downloadAllWebdrivers(dependsOn: [downloadGeckoWebdrivers, downloadChromeWebdrivers, downloadIeWebdrivers]) {
+task downloadAllWebdrivers(dependsOn: [downloadGeckoWebdrivers, downloadChromeWebdrivers]) {
     group 'ZAP'
     description 'Downloads all of the Webdrivers.'
 }
 
 clean {
-  delete fileTree(dir: 'files/webdriver', includes: ['**/geckodriver*', '**/chromedriver*', '**/IEDriverServer.exe'] )
+  delete fileTree(dir: 'files/webdriver', includes: ['**/geckodriver*', '**/chromedriver*'] )
 }
