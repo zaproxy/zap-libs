@@ -11,12 +11,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
-    mavenLocal()
     mavenCentral()
-}
-
-dependencies {
-    compile ('org.apache.commons:commons-compress:1.18')
 }
 
 spotless {
@@ -27,25 +22,3 @@ spotless {
     }
 }
 
-task downloadGeckoWebdrivers(type: JavaExec, dependsOn: 'classes') {
-    group 'ZAP'
-    description 'Downloads the Gecko Webdrivers.'
-    classpath configurations.runtime, sourceSets.main.output
-    main = 'org.zaproxy.libs.WebdriverDownloadGecko'
-}
-
-task downloadChromeWebdrivers(type: JavaExec, dependsOn: 'classes') {
-    group 'ZAP'
-    description 'Downloads the Chrome Webdrivers.'
-    classpath configurations.runtime, sourceSets.main.output
-    main = 'org.zaproxy.libs.WebdriverDownloadChrome'
-}
-
-task downloadAllWebdrivers(dependsOn: [downloadGeckoWebdrivers, downloadChromeWebdrivers]) {
-    group 'ZAP'
-    description 'Downloads all of the Webdrivers.'
-}
-
-clean {
-  delete fileTree(dir: 'files/webdriver', includes: ['**/geckodriver*', '**/chromedriver*'] )
-}
