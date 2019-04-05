@@ -1,2 +1,2 @@
 # zap-libs
-Libraries required by ZAP and its add-ons that we dont want to store in the other repos
+Libraries required by ZAP that we dont want to store in the other repos
